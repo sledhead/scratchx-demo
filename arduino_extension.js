@@ -580,7 +580,7 @@
       ['-'],
       ['r', 'map %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240],
       ['-'],
-      ['r', 'read ultrasonic %n, 'ultrasonicRead', 0]
+      ['r', 'read ultrasonic %n', 'ultrasonicRead', 0]
     ],
     de: [
       ['h', 'Wenn Arduino verbunden ist', 'whenConnected'],
