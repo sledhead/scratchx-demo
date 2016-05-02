@@ -285,6 +285,10 @@
       return;
     }
   }
+  
+  function ultrasonicRead(pin) {
+    return 12;
+  }
 
   function digitalRead(pin) {
     if (!hasCapability(pin, INPUT)) {
@@ -360,6 +364,10 @@
 
   ext.analogRead = function(pin) {
     return analogRead(pin);
+  };
+  
+  ext.ultrasonicRead = function(pin) {
+    return ultrasonicRead(pin);
   };
 
   ext.digitalRead = function(pin) {
@@ -570,7 +578,9 @@
       ['h', 'when analog %n %m.ops %n%', 'whenAnalogRead', 1, '>', 50],
       ['r', 'read analog %n', 'analogRead', 0],
       ['-'],
-      ['r', 'map %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240]
+      ['r', 'map %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240],
+      ['-'],
+      ['r', 'read ultrasonic %n, 'ultrasonicRead', 0]
     ],
     de: [
       ['h', 'Wenn Arduino verbunden ist', 'whenConnected'],
